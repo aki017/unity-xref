@@ -15,4 +15,4 @@ git checkout -b pr
 git add .
 git commit -m "Auto update doc"
 git push origin pr:pr-$key
-hub pull-request -m "Auto update doc $key" -h pr-$key
+hub pull-request -m "Auto update doc $UNITY_VERSION $key" -h pr-$UNITY_VERSION-$key
