@@ -16,5 +16,5 @@ git remote set-url origin https://aki017:$GITHUB_TOKEN@github.com/aki017/unity-x
 git checkout -b pr
 git add .
 git commit -m "Auto update doc"
-git push origin pr:pr-$key
+git push origin pr:pr-$UNITY_VERSION-$key
 hub pull-request -m "Auto update doc $UNITY_VERSION $key" -h pr-$UNITY_VERSION-$key
