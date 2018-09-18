@@ -1,7 +1,7 @@
 require "sinatra"
 require "json"
 
-get "/:version/query" do
+get "/query" do
   uid = params["uid"]
   version = params["version"]
   puts "Receive #{uid}"
