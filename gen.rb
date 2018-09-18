@@ -21,7 +21,7 @@ class TocParser
   end
 
   def info
-    @info unless @info.nil?
+    return @info unless @info.nil?
     @info ||= {}
 
     data["children"].each do |e|
@@ -64,17 +64,17 @@ class TocParser
   end
 
   def detail
-    @detail unless @detail.nil?
+    return @detail unless @detail.nil?
 
     @detail = {}
+    start = Time.now
     info.each_with_index do |(k, v), i|
       @detail[k] = v
       get(v).each do |kk, vv|
         @detail["#{k}.#{kk}"] = vv
       end
-      $stderr.puts "#{i+1} / #{info.size}"
+      $stderr.puts "#{i+1} / #{info.size} #{Time.at((Time.now-start)/(i+1)*info.size).utc.strftime("%H:%M:%S")}"
       sleep 1 if $local.nil?
-      break
     end
 
     @detail
