@@ -69,12 +69,17 @@ class TocParser
     @detail = {}
     start = Time.now
     info.each_with_index do |(k, v), i|
-      @detail[k] = v
-      get(v).each do |kk, vv|
-        @detail["#{k}.#{kk}"] = vv
+      begin
+        @detail[k] = v
+        get(v).each do |kk, vv|
+          @detail["#{k}.#{kk}"] = vv
+        end
+        $stderr.puts "#{i+1} / #{info.size} #{Time.at((Time.now-start)/(i+1)*info.size).utc.strftime("%H:%M:%S")}"
+        sleep 1 if $local.nil?
+      rescue
+        $stderr.puts "Error #{k}"
+        sleep 1 if $local.nil?
       end
-      $stderr.puts "#{i+1} / #{info.size} #{Time.at((Time.now-start)/(i+1)*info.size).utc.strftime("%H:%M:%S")}"
-      sleep 1 if $local.nil?
     end
 
     @detail
