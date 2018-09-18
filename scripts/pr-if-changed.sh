@@ -5,8 +5,7 @@ if [ `git status --porcelain | wc -l` -eq 0 ]; then
 fi
 
 HUB=2.5.1
-curl -LO "https://github.com/github/hub/releases/download/v$HUB/hub-linux-amd64-$HUB.tgz"
-tar -C "$HOME" -zxf "hub-linux-amd64-$HUB.tgz"
+curl -L "https://github.com/github/hub/releases/download/v$HUB/hub-linux-amd64-$HUB.tgz" | tar -C "$HOME" -zx
 export PATH="$PATH:$HOME/hub-linux-amd64-$HUB/bin"
 
 key=`date "+%Y%m%d%H%M"`
