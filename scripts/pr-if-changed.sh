@@ -10,6 +10,7 @@ tar -C "$HOME" -zxf "hub-linux-amd64-$HUB.tgz"
 export PATH="$PATH:$HOME/hub-linux-amd64-$HUB/bin"
 
 key=`date "+%Y%m%d%H%M"`
+git remote set-url origin https://aki017:$GITHUB_TOKEN@github.com/aki017/unity-xref
 git checkout -b pr
 git add .
 git commit -m "Auto update doc"
