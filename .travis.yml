@@ -1,0 +1,18 @@
+language: ruby
+rvm: 2.5.1
+bundler_args: --deployment
+cache: bundler
+
+env:
+  matrix:
+    - UNITY_VERSION="2017.1"
+    - UNITY_VERSION="2017.2"
+    - UNITY_VERSION="2017.3"
+    - UNITY_VERSION="2017.4"
+    - UNITY_VERSION="2018.1"
+    - UNITY_VERSION="2018.2"
+    - UNITY_VERSION="2018.3"
+
+script:
+  - bundle exec ruby gen.rb $UNITY_VERSION
+  - ./scripts/pr-if-changed.sh
