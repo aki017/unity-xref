@@ -87,5 +87,5 @@ class TocParser
 end
 
 if __FILE__ == $0
-  puts TocParser.new(ARGV[0]).detail.to_json
+  puts JSON.pretty_generate TocParser.new(ARGV[0]).detail
 end
