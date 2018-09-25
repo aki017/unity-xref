@@ -69,6 +69,7 @@ class TocParser
     @detail = {}
     start = Time.now
     info.each_with_index do |(k, v), i|
+      retry_count = 3
       begin
         @detail[k] = v
         get(v).each do |kk, vv|
@@ -79,7 +80,8 @@ class TocParser
       rescue
         $stderr.puts "Error #{k}"
         sleep 1 if $local.nil?
-        retry
+        retry_count = retry_count - 1
+        retry if retry_count > 0
       end
     end
 
