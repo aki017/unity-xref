@@ -79,6 +79,7 @@ class TocParser
       rescue
         $stderr.puts "Error #{k}"
         sleep 1 if $local.nil?
+        retry
       end
     end
 
