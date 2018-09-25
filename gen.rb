@@ -69,19 +69,19 @@ class TocParser
     @detail = {}
     start = Time.now
     info.each_with_index do |(k, v), i|
-      retry_count = 3
+      retry_count = 100
       begin
         @detail[k] = v
         get(v).each do |kk, vv|
           @detail["#{k}.#{kk}"] = vv
         end
-        $stderr.puts "#{i+1} / #{info.size} #{Time.at((Time.now-start)/(i+1)*info.size).utc.strftime("%H:%M:%S")}"
+        $stderr.puts "#{i+1} / #{info.size} #{(start+Time.at((Time.now-start)/(i+1)*info.size)).utc.strftime("%H:%M:%S")}"
         sleep 1 if $local.nil?
-      rescue
+      rescue OpenURI::HTTPError => e
         $stderr.puts "Error #{k}"
         sleep 1 if $local.nil?
         retry_count = retry_count - 1
-        retry if retry_count > 0
+        retry if retry_count > 0 && e.message == "404 Not Found"
       end
     end
 
