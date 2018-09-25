@@ -82,7 +82,7 @@ class TocParser
         sleep 1 if $local.nil?
         retry_count = retry_count - 1
         if retry_count > 0 && e.message != "404 Not Found"
-          rery
+          retry
         else
           raise
         end
