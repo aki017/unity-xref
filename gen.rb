@@ -75,7 +75,7 @@ class TocParser
         get(v).each do |kk, vv|
           @detail["#{k}.#{kk}"] = vv
         end
-        $stderr.puts "#{i+1} / #{info.size} #{(start+(Time.at((Time.now-start)/(i+1)*info.size).to_i).utc.strftime("%H:%M:%S")}"
+        $stderr.puts "#{i+1} / #{info.size} #{(start+(Time.at((Time.now-start)/(i+1)*info.size).utc.to_i)).strftime("%H:%M:%S")}"
         sleep 1 if $local.nil?
       rescue OpenURI::HTTPError => e
         $stderr.puts "Error #{k}"
