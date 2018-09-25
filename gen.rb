@@ -90,5 +90,6 @@ class TocParser
 end
 
 if __FILE__ == $0
+  $stderr.puts "Start #{ARGV[0]}"
   puts JSON.pretty_generate TocParser.new(ARGV[0]).detail
 end
