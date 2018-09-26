@@ -83,6 +83,8 @@ class TocParser
         retry_count = retry_count - 1
         if retry_count > 0 && e.message != "404 Not Found"
           retry
+        if retry_count > 0 && e.message == "404 Not Found"
+          # nothing
         else
           raise
         end
