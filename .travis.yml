@@ -18,5 +18,4 @@ branches:
   - master
 
 script:
-  - bundle exec ruby gen.rb $UNITY_VERSION > json/$UNITY_VERSION.json
-  - ./scripts/pr-if-changed.sh
+  - bundle exec ruby gen.rb $UNITY_VERSION > json/$UNITY_VERSION.json && ./scripts/pr-if-changed.sh
