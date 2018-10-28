@@ -28974,6 +28974,7 @@
   "UnityEditor.LightmapEditorSettings.aoExponentDirect": "LightmapEditorSettings-aoExponentDirect.html",
   "UnityEditor.LightmapEditorSettings.aoExponentIndirect": "LightmapEditorSettings-aoExponentIndirect.html",
   "UnityEditor.LightmapEditorSettings.aoMaxDistance": "LightmapEditorSettings-aoMaxDistance.html",
+  "UnityEditor.LightmapEditorSettings.bakeResolution": "LightmapEditorSettings-bakeResolution.html",
   "UnityEditor.LightmapEditorSettings.enableAmbientOcclusion": "LightmapEditorSettings-enableAmbientOcclusion.html",
   "UnityEditor.LightmapEditorSettings.filterTypeAO": "LightmapEditorSettings-filterTypeAO.html",
   "UnityEditor.LightmapEditorSettings.filterTypeDirect": "LightmapEditorSettings-filterTypeDirect.html",
