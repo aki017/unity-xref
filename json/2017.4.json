@@ -23441,6 +23441,7 @@
   "UnityEditor.EditorUserBuildSettings.androidBuildSubtarget": "EditorUserBuildSettings-androidBuildSubtarget.html",
   "UnityEditor.EditorUserBuildSettings.androidBuildSystem": "EditorUserBuildSettings-androidBuildSystem.html",
   "UnityEditor.EditorUserBuildSettings.androidETC2Fallback": "EditorUserBuildSettings-androidETC2Fallback.html",
+  "UnityEditor.EditorUserBuildSettings.buildAppBundle": "EditorUserBuildSettings-buildAppBundle.html",
   "UnityEditor.EditorUserBuildSettings.buildScriptsOnly": "EditorUserBuildSettings-buildScriptsOnly.html",
   "UnityEditor.EditorUserBuildSettings.compressFilesInPackage": "EditorUserBuildSettings-compressFilesInPackage.html",
   "UnityEditor.EditorUserBuildSettings.compressWithPsArc": "EditorUserBuildSettings-compressWithPsArc.html",
