@@ -9856,6 +9856,7 @@
   "UnityEngine.Timeline.ActivationTrack.OnDisable": "ScriptableObject.OnDisable.html",
   "UnityEngine.Timeline.ActivationTrack.OnEnable": "ScriptableObject.OnEnable.html",
   "UnityEngine.Timeline.AnimationPlayableAsset": "Timeline.AnimationPlayableAsset.html",
+  "UnityEngine.Timeline.AnimationPlayableAsset.applyFootIK": "Timeline.AnimationPlayableAsset-applyFootIK.html",
   "UnityEngine.Timeline.AnimationPlayableAsset.clip": "Timeline.AnimationPlayableAsset-clip.html",
   "UnityEngine.Timeline.AnimationPlayableAsset.eulerAngles": "Timeline.AnimationPlayableAsset-eulerAngles.html",
   "UnityEngine.Timeline.AnimationPlayableAsset.matchTargetFields": "Timeline.AnimationPlayableAsset-matchTargetFields.html",
